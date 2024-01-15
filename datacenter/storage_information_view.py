@@ -5,7 +5,6 @@ from django.utils.timezone import localtime
 
 
 def storage_information_view(request):
-    # Программируем здесь
     non_closed_visits = []
     active_visits = Visit.objects.filter(leaved_at__isnull=True)
     for visitor in active_visits:
