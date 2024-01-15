@@ -4,8 +4,6 @@ from django.shortcuts import render
 
 
 def active_passcards_view(request):
-    # Программируем здесь
-
     all_passcards = Passcard.objects.all()
 
     active_passcards = Passcard.objects.filter(is_active=True)
